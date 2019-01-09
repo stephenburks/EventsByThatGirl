@@ -1,0 +1,637 @@
+a {
+  text-decoration: none;
+  text-align: center;
+}
+
+body {
+  margin: 5px 3% 2% 3%;
+  color: #6b6b6b;
+  font-family: 'Montserrat', "SF Mono", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro", monospace;
+  font-weight: 300;
+}
+
+@media (min-width: 900px) {
+  body {
+    margin: 10px 5% 2% 5%;
+  }
+}
+
+button > a {
+  font-weight: 400;
+  font-family: 'Montserrat', "SF Mono", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro", monospace;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+button {
+  border: 0px;
+  text-align: center;
+  padding: 8px;
+  -webkit-box-shadow: 0px 0px 25px -5px #333333;
+  box-shadow: 0px 0px 25px -5px #333333;
+}
+
+button:hover {
+  -webkit-transform: scale(1.025);
+          transform: scale(1.025);
+  -webkit-box-shadow: 0px 0px 25px -2px #333333;
+          box-shadow: 0px 0px 25px -2px #333333;
+}
+
+button:hover a {
+  font-weight: 600;
+}
+
+button.white a {
+  color: #D6ADAA;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  font-family: "Cormorant Garamond", "Apple Garamond", "Baskerville", "Times New Roman", "Droid Serif", "Times", "Source Serif Pro", serif;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+@media (min-width: 900px) {
+  h1 {
+    font-size: 3.2rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 0.25;
+}
+
+@media (min-width: 900px) {
+  h2 {
+    font-size: 3rem;
+  }
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+@media (min-width: 900px) {
+  h3 {
+    font-size: 2.5rem;
+  }
+}
+
+h4, h5, h6 {
+  font-size: 1.2rem;
+  font-family: 'Montserrat', "SF Mono", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro", monospace;
+  font-weight: 400;
+  color: #D1AA66;
+}
+
+main {
+  margin-bottom: 0;
+}
+
+p {
+  line-height: 1.8;
+  font-size: 1.2rem;
+}
+
+strong {
+  font-weight: 600;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+button#submit {
+  width: 100%;
+  background-color: #D1AA66;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button#submit:hover {
+  background-color: #D1AA66;
+}
+
+#padding {
+  padding: 50px 0px;
+}
+
+#small-padding {
+  padding: 10px 0px;
+}
+
+#quote {
+  display: block;
+  font-style: italic;
+  font-family: "Cormorant Garamond", "Apple Garamond", "Baskerville", "Times New Roman", "Droid Serif", "Times", "Source Serif Pro", serif;
+  font-size: 1.6rem;
+}
+
+.divider {
+  margin: 50px auto;
+  height: 1px;
+  width: 175px;
+  background: #D1AA66;
+  border-bottom: 1px solid #D1AA66;
+}
+
+.full {
+  width: 100%;
+  height: 1px;
+  background: #D1AA66;
+  border-bottom: 1px solid #D1AA66;
+}
+
+.small {
+  margin: 25px 0px;
+}
+
+.accent {
+  margin: 25px 0px;
+  background: #D6ADAA;
+  border-bottom: 1px solid #D6ADAA;
+}
+
+.centered {
+  text-align: center;
+}
+
+#landing {
+  margin: 0;
+}
+
+#landing #hero.section {
+  height: 75vh;
+  background-image: url("https://res.cloudinary.com/dcvupifbk/image/upload/f_auto,q_100/v1547041773/EventsByThatGirl/EventPlanningImage-min.jpg");
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 900px) {
+  #landing #hero.section {
+    height: 85vh;
+  }
+}
+
+#landing #hero.section img {
+  height: 175px;
+  width: 175px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 25px -5px #333333;
+  box-shadow: 0px 0px 25px -5px #333333;
+}
+
+#services .service {
+  height: 200px;
+  margin: 4% 0% 0% 0%;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 0px;
+  color: #6b6b6b;
+}
+
+#services .service .item {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+#services .one {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(214, 173, 170, 0.9)), to(rgba(214, 173, 170, 0.9))), url("https://res.cloudinary.com/dcvupifbk/image/upload/f_auto,q_100/v1544034116/EventsByThatGirl/6-min.png");
+  background: linear-gradient(rgba(214, 173, 170, 0.9), rgba(214, 173, 170, 0.9)), url("https://res.cloudinary.com/dcvupifbk/image/upload/f_auto,q_100/v1544034116/EventsByThatGirl/6-min.png");
+  background-size: 100%;
+}
+
+#services .two {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(214, 173, 170, 0.9)), to(rgba(214, 173, 170, 0.9))), url("https://res.cloudinary.com/dcvupifbk/image/upload/f_auto,q_100/v1544034116/EventsByThatGirl/7-min.png");
+  background: linear-gradient(rgba(214, 173, 170, 0.9), rgba(214, 173, 170, 0.9)), url("https://res.cloudinary.com/dcvupifbk/image/upload/f_auto,q_100/v1544034116/EventsByThatGirl/7-min.png");
+  background-size: 100%;
+}
+
+#services .three {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(214, 173, 170, 0.9)), to(rgba(214, 173, 170, 0.9))), url("https://res.cloudinary.com/dcvupifbk/image/upload/f_auto,q_100/v1544034115/EventsByThatGirl/2-min.png");
+  background: linear-gradient(rgba(214, 173, 170, 0.9), rgba(214, 173, 170, 0.9)), url("https://res.cloudinary.com/dcvupifbk/image/upload/f_auto,q_100/v1544034115/EventsByThatGirl/2-min.png");
+  background-size: 100%;
+}
+
+@media (min-width: 900px) {
+  #services {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    grid-column-gap: 30px;
+  }
+  #services .one, #services .two, #services .three {
+    height: 275px;
+    width: 100%;
+  }
+}
+
+#introduction {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto 1fr;
+      grid-template-rows: auto 1fr;
+  grid-gap: 20px;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#introduction img {
+  max-width: 250px;
+}
+
+@media (min-width: 900px) {
+  #introduction {
+    -ms-grid-columns: 30% 70%;
+        grid-template-columns: 30% 70%;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+  }
+}
+
+#gallery .gallery-grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+#gallery .gallery-grid a > img {
+  max-width: 100%;
+  -webkit-box-shadow: 0px 0px 25px -5px #333333;
+  box-shadow: 0px 0px 25px -5px #333333;
+  margin-bottom: 15px;
+}
+
+@media (min-width: 775px) {
+  #gallery .gallery-grid {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (1fr)[3];
+        grid-template-rows: repeat(3, 1fr);
+    grid-gap: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+#testimonial-grid .testimonial {
+  background: #eeeeee;
+  margin: 4% 0%;
+}
+
+#testimonial-grid .testimonial .blurb {
+  padding: 10px 20px;
+  background-image: url("https://res.cloudinary.com/dcvupifbk/image/upload/f_auto,q_100/v1544461544/EventsByThatGirl/quotation-mark-lightest.png");
+  background-size: 50%;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 775px) {
+  #testimonial-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: minmax(100px, auto);
+        grid-template-rows: minmax(100px, auto);
+    grid-column-gap: 20px;
+  }
+}
+
+#contact {
+  background-color: #eeeeee;
+  padding: 25px 50px;
+}
+
+#contact .contact-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 200px;
+      grid-template-columns: 200px;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  grid-row-gap: 15px;
+}
+
+#contact .contact-grid button {
+  margin: 15px 0px 20px 0px;
+  padding: 10px 0px;
+  background: #D6ADAA;
+  border: none;
+  -webkit-box-shadow: 0px 0px 25px -5px #333333;
+  box-shadow: 0px 0px 25px -5px #333333;
+}
+
+#contact .contact-grid button a {
+  color: #ffffff;
+  letter-spacing: 1px;
+  border: none;
+  text-decoration: none;
+}
+
+#contact .contact-grid a {
+  color: #D1AA66;
+  text-decoration: underline;
+}
+
+#footer-menu {
+  margin-top: 15px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+@media (min-width: 775px) {
+  #footer-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+#footer-menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style: none;
+}
+
+#footer-menu a {
+  text-decoration: none;
+  padding: 10px 1vw;
+  color: var(--gray);
+}
+
+#pages {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 240px 100%;
+      grid-template-rows: 240px 100%;
+}
+
+@media (min-width: 900px) {
+  #pages {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 30% 70%;
+        grid-template-columns: 30% 70%;
+    -ms-grid-rows: 100%;
+        grid-template-rows: 100%;
+  }
+}
+
+#columnOne {
+  min-height: 150px;
+}
+
+@media (min-width: 900px) {
+  #columnOne {
+    background-color: transparent;
+  }
+}
+
+#columnOne .about {
+  background-image: url("https://res.cloudinary.com/dcvupifbk/image/upload/f_auto,q_100/v1544306083/EventsByThatGirl/banquet-catering-stock-min.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 900px) {
+  #columnOne .about {
+    background-image: url("https://res.cloudinary.com/dcvupifbk/image/upload/f_auto,q_100/v1544306088/EventsByThatGirl/banquet-catering-stock-vertical-min.jpg");
+    background-size: cover;
+  }
+}
+
+#columnOne .services {
+  background-image: url("https://res.cloudinary.com/dcvupifbk/image/upload/f_auto,q_100/v1544306087/EventsByThatGirl/celebration-colorful-stock-min.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 900px) {
+  #columnOne .services {
+    background-image: url("https://res.cloudinary.com/dcvupifbk/image/upload/f_auto,q_auto/v1544306085/EventsByThatGirl/adult-celebration-stock-vertical-min.jpg");
+    background-size: cover;
+  }
+}
+
+#columnOne .quote {
+  background-image: url("https://res.cloudinary.com/dcvupifbk/image/upload/f_auto,q_100/v1544306085/EventsByThatGirl/beautiful-bouquet-stock-min.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 900px) {
+  #columnOne .quote {
+    background-image: url("https://res.cloudinary.com/dcvupifbk/image/upload/f_auto,q_100/v1544306090/EventsByThatGirl/yellow-garland-stock-vertical-min.jpg");
+    background-size: cover;
+  }
+}
+
+#columnOne .contact {
+  background-image: url("https://res.cloudinary.com/dcvupifbk/image/upload/f_auto,q_100/v1544306090/EventsByThatGirl/people-toasting-stock-min.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 900px) {
+  #columnOne .contact {
+    background-image: url("https://res.cloudinary.com/dcvupifbk/image/upload/f_auto,q_100/v1544306086/EventsByThatGirl/banquet-candle-catering-stock-vertical-min.jpg");
+    background-size: cover;
+  }
+}
+
+#columnTwo {
+  margin: 10px 25px 0px 25px;
+}
+
+@media (min-width: 900px) {
+  #columnTwo {
+    margin: 75px 25px 0px 45px;
+  }
+}
+
+#headingImage {
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: minmax(150px 240px);
+      grid-template-rows: minmax(150px 240px);
+  justify-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+@media (min-width: 900px) {
+  #headingImage {
+    -ms-grid-rows: 100%;
+        grid-template-rows: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 8vh;
+    bottom: 8vh;
+    max-height: 84vh;
+  }
+}
+
+#headingImage .mobile-heading {
+  text-align: center;
+  margin: auto;
+  color: white;
+  font-size: 68px;
+}
+
+@media (min-width: 900px) {
+  #headingImage .mobile-heading {
+    display: none;
+  }
+}
+
+#headingImage .overlay {
+  background-color: rgba(214, 173, 170, 0.85);
+  width: 100%;
+  height: 240px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+@media (min-width: 900px) {
+  #headingImage .overlay {
+    display: none;
+  }
+}
+
+#packages .panel {
+  display: block;
+}
+
+#packages .panel ul {
+  margin-left: 50px;
+  line-height: 2;
+}
+
+#packages .panel ul.sub-list {
+  margin: 20px 0px 20px 50px;
+}
+
+#packages .cards {
+  margin-bottom: 50px;
+  padding: 10px 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 25px -5px #333333;
+  -webkit-box-shadow: 0px 0px 25px -5px #333333;
+  -moz-box-shadow: 0px 0px 25px -5px #333333;
+}
+
+#packages .cards .panel {
+  background: #eeeeee;
+  padding: 5px 30px;
+}
+
+#packages .cards button {
+  background: #D1AA66;
+}
+
+button.accordion {
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  padding: 15px 20px;
+  font-size: 18px;
+  color: #444;
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+}
+
+button.accordion:after {
+  content: '+';
+  font-size: 20px;
+  float: right;
+}
+
+button.accordion.is-open:after {
+  content: 'X';
+  font-size: 16px;
+}
+
+button.accordion.is-open {
+  background-color: #D6ADAA !important;
+}
+
+.accordion-content {
+  display: block;
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.2s ease-in-out;
+  transition: max-height 0.2s ease-in-out;
+}
+/*# sourceMappingURL=style.css.map */

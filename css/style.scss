@@ -1,0 +1,567 @@
+// 
+// Variables
+// 
+$colors: (
+    pink: #D6ADAA,
+    pink-translucent: rgba(214, 173, 170, 0.85),
+    pink-overlay: rgba(214, 173, 170, 0.90),
+    gold: #D1AA66,
+    grey: #6b6b6b,
+    border-grey: #aaaaaa,
+    light-grey: #eeeeee
+);
+
+$shadow: 0px 0px 25px -5px #333333;
+$heavyShadow: 0px 0px 25px -2px #333333;
+$margin: 50px;
+$small-margin: 15px;
+$mobile: 350px;
+$tablet: 775px;
+$desktop: 900px;
+$font-body: 'Montserrat', "SF Mono", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro", monospace;
+$font-heading: 'Cormorant Garamond', "Apple Garamond", "Baskerville", "Times New Roman", "Droid Serif", "Times","Source Serif Pro", serif;
+
+// 
+// Functions
+// 
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+};
+
+
+// 
+// Mixixns
+// 
+@mixin mobile {
+    @media (min-width:#{$mobile}){
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width:#{$tablet}){
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width:#{$desktop}){
+        @content;
+    }
+}
+
+
+// 
+// Element Selectors
+// 
+a {
+    text-decoration: none;
+    text-align: center;
+}
+
+body {
+    margin: 5px 3% 2% 3%;
+    color: color(grey);
+    font-family: 'Montserrat', "SF Mono", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro", monospace;
+    font-weight: 300;
+        @include desktop {
+            margin: 10px 5% 2% 5%;
+        }
+}
+
+button > a{
+    font-weight: 400;
+    font-family: 'Montserrat', "SF Mono", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro", monospace;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+button {
+    border: 0px;
+    text-align: center;
+    padding: 8px;
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+button:hover {
+    transform: scale(1.025);
+    box-shadow: $heavyShadow;
+        a {
+            font-weight: 600;
+        }
+}
+
+button.white {
+    a {
+        color: color(pink);
+    }
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    font-family: $font-heading;
+}
+
+h1 {
+    font-size: 2.2rem;
+        @include desktop() {
+            font-size: 3.2rem;
+        }
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 0.25;
+        @include desktop() {
+            font-size: 3rem;
+        }
+}
+
+h3 {
+    font-size: 1.8rem;
+    @include desktop() {
+        font-size: 2.5rem;
+    }
+}
+
+h4, h5, h6 {
+    font-size: 1.2rem;
+    font-family: 'Montserrat', "SF Mono", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro", monospace;
+    font-weight: 400;
+    color: color(gold);
+}
+
+main {
+    margin-bottom: 0;
+}
+
+p {
+    line-height: 1.8;
+    font-size: 1.2rem;
+}
+
+strong {
+    font-weight: 600;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    }
+
+button#submit {
+    width: 100%;
+    background-color: color(gold);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+
+button#submit:hover {
+    background-color: color(gold);
+    }
+
+// Helper IDs
+#padding {
+    padding: 50px 0px;
+}
+
+#small-padding {
+    padding: 10px 0px;
+}
+
+#quote{
+    display: block;
+    font-style: italic;
+    font-family: $font-heading;
+    font-size: 1.6rem;
+}
+
+// Helper Classes
+.divider{
+    margin: 50px auto;
+    height:1px;
+    width: 175px;
+    background: color(gold);
+    border-bottom:1px solid color(gold);
+    }
+
+.full {
+    width: 100%;
+    height:1px;
+    background: color(gold);
+    border-bottom:1px solid color(gold);
+}
+
+.small {
+    margin: 25px 0px;
+}
+
+.accent {
+    margin: 25px 0px;
+    background: color(pink);
+    border-bottom:1px solid color(pink);
+}
+
+.centered {
+    text-align: center;
+}
+
+// 
+// Home Page Styles
+// 
+#landing {
+    margin: 0;
+        #hero.section {
+            height: 75vh;
+            background-image: url('https://res.cloudinary.com/dcvupifbk/image/upload/f_auto,q_100/v1547041773/EventsByThatGirl/EventPlanningImage-min.jpg');
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+                @include desktop() {
+                    height: 85vh;
+                }
+            img {
+                height: 175px;
+                width: 175px;
+                border-radius: 50%;
+                -webkit-box-shadow: $shadow;
+                -moz-box-shadow: $shadow;
+                box-shadow: $shadow;
+            }
+        }
+    }
+
+#services {
+    .service {
+        height: 200px;
+        margin: 4% 0% 0% 0%;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        padding: 0px;
+        color: color(grey);
+            .item {
+                display: grid;
+                justify-content: center;
+                align-content: center;
+            }
+    }
+    .one {
+        background: linear-gradient(color(pink-overlay), color(pink-overlay)), url("https://res.cloudinary.com/dcvupifbk/image/upload/f_auto,q_100/v1544034116/EventsByThatGirl/6-min.png");
+        background-size: 100%;
+    }
+    .two {
+        background: linear-gradient(color(pink-overlay), color(pink-overlay)), url("https://res.cloudinary.com/dcvupifbk/image/upload/f_auto,q_100/v1544034116/EventsByThatGirl/7-min.png");
+        background-size: 100%;
+    }
+    .three {
+        background: linear-gradient(color(pink-overlay), color(pink-overlay)), url("https://res.cloudinary.com/dcvupifbk/image/upload/f_auto,q_100/v1544034115/EventsByThatGirl/2-min.png");
+        background-size: 100%;
+    }
+    @include desktop {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 30px;
+            .one, .two, .three {
+                height: 275px;
+                width: 100%;
+            }
+    }
+}
+
+#introduction {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    grid-gap: 20px;
+    justify-items: center;
+    align-items: center;
+        img {
+            max-width: 250px;
+        }
+        @include desktop(){
+            grid-template-columns: 30% 70%;
+            grid-template-rows: 1fr;
+        }
+}
+
+#gallery {
+    .gallery-grid{
+        display: grid;
+            a > img{
+                max-width: 100%;
+                -webkit-box-shadow: $shadow;
+                -moz-box-shadow: $shadow;
+                box-shadow: $shadow;
+                margin-bottom: 15px;
+            }
+    
+            @include tablet{
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                grid-gap: 15px;
+                margin-bottom: $small-margin;
+            }
+    }
+}
+
+#testimonial-grid {
+    .testimonial {
+        background: color(light-grey);
+        margin: 4% 0%;
+            .blurb {
+                padding: 10px 20px;
+                background-image: url("https://res.cloudinary.com/dcvupifbk/image/upload/f_auto,q_100/v1544461544/EventsByThatGirl/quotation-mark-lightest.png");
+                background-size: 50%;
+                background-position: 50%;
+                background-repeat: no-repeat;
+        }
+    }
+    @include tablet{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: minmax(100px, auto);
+        grid-column-gap: 20px;
+    }
+}
+
+
+#contact {
+    background-color: color(light-grey);
+    padding: 25px 50px;
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 200px;
+            grid-template-rows: auto;
+            grid-row-gap: 15px;
+                button {
+                    margin: 15px 0px 20px 0px;
+                    padding: 10px 0px;
+                    background: color(pink);
+                    border: none;
+                    -webkit-box-shadow: $shadow;
+                    -moz-box-shadow: $shadow;
+                    box-shadow: $shadow;
+                        a {
+                            color: #ffffff;
+                            letter-spacing: 1px;
+                            border: none;
+                            text-decoration: none;
+                        }
+                    }
+                a {
+                    color: color(gold);
+                    text-decoration: underline;
+                }
+        }
+}
+
+#footer-menu {
+    margin-top: $small-margin;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    overflow: hidden;
+        @include tablet() {
+            display: flex;
+            justify-content: space-between;
+        }
+        ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            padding: 10px 1vw;
+            color: var(--gray);
+        }
+}
+
+
+// 
+// Sub Page Styling
+// 
+#pages {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 240px 100%;
+        @include desktop() {
+            display: grid;
+            grid-template-columns: 30% 70%;
+            grid-template-rows: 100%;
+        }
+}
+
+#columnOne {
+    min-height: 150px;
+        @include desktop() {
+            background-color: transparent;
+        }
+        .about {
+            background-image: url("https://res.cloudinary.com/dcvupifbk/image/upload/f_auto,q_100/v1544306083/EventsByThatGirl/banquet-catering-stock-min.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+                @include desktop() {
+                    background-image: url("https://res.cloudinary.com/dcvupifbk/image/upload/f_auto,q_100/v1544306088/EventsByThatGirl/banquet-catering-stock-vertical-min.jpg");
+                    background-size: cover;
+                }
+        }
+        .services {
+            background-image: url("https://res.cloudinary.com/dcvupifbk/image/upload/f_auto,q_100/v1544306087/EventsByThatGirl/celebration-colorful-stock-min.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+                @include desktop() {
+                    background-image: url("https://res.cloudinary.com/dcvupifbk/image/upload/f_auto,q_auto/v1544306085/EventsByThatGirl/adult-celebration-stock-vertical-min.jpg");
+                    background-size: cover;
+                }
+        }
+        .quote {
+            background-image: url("https://res.cloudinary.com/dcvupifbk/image/upload/f_auto,q_100/v1544306085/EventsByThatGirl/beautiful-bouquet-stock-min.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+                @include desktop() {
+                    background-image: url("https://res.cloudinary.com/dcvupifbk/image/upload/f_auto,q_100/v1544306090/EventsByThatGirl/yellow-garland-stock-vertical-min.jpg");
+                    background-size: cover;
+                }
+        }
+        .contact {
+            background-image: url("https://res.cloudinary.com/dcvupifbk/image/upload/f_auto,q_100/v1544306090/EventsByThatGirl/people-toasting-stock-min.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+                @include desktop() {
+                    background-image: url("https://res.cloudinary.com/dcvupifbk/image/upload/f_auto,q_100/v1544306086/EventsByThatGirl/banquet-candle-catering-stock-vertical-min.jpg");
+                    background-size: cover;
+                }
+        }
+}
+
+#columnTwo {
+    margin: 10px 25px 0px 25px;
+        @include desktop() {
+            margin: 75px 25px 0px 45px;
+        }
+}
+
+#headingImage {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(150px 240px);
+    justify-items: center;
+    align-content: center;
+        @include desktop() {
+            grid-template-rows: 100%;
+            position: sticky;
+            top: 8vh;
+            bottom: 8vh;
+            max-height: 84vh;
+        }
+        .mobile-heading {
+            // padding-top: 50%;
+            text-align: center;
+            margin: auto;
+            color: white;
+            font-size: 68px;
+                @include desktop() {
+                    display: none;
+                }
+        }
+        .overlay {
+            background-color: color(pink-translucent);
+            width: 100%;
+            height: 240px;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+                @include desktop() {
+                    display: none;
+                }
+            }
+}
+
+#packages {
+    .panel {
+        display: block;
+        ul {
+            margin-left: 50px;
+            line-height: 2;
+        }
+        ul.sub-list {
+            margin: 20px 0px 20px 50px;
+        }
+    }
+    .cards {
+        margin-bottom: 50px;
+        padding: 10px 30px;
+        border-radius: 10px;
+        box-shadow: $shadow;
+        -webkit-box-shadow: $shadow;
+        -moz-box-shadow: $shadow;
+        .panel {
+            background: color(light-grey);
+            padding: 5px 30px;
+        }
+        button {
+            background: color(gold);
+        }
+    }
+}
+
+
+
+
+
+
+button.accordion {
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    padding: 15px 20px;
+    font-size: 18px;
+    color: #444;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+  }
+  
+  button.accordion:after {
+    content: '+';
+    font-size: 20px;
+    float: right;
+  }
+  
+  button.accordion.is-open:after {
+    content: 'X';
+    font-size: 16px;
+  }
+  
+ button.accordion.is-open {
+    background-color: color(pink)!important;
+  }
+  
+  .accordion-content {
+    display: block;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+  }
