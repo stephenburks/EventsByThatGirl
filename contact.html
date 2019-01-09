@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Events By That Girl | Samantha Heaton</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,600|Montserrat:300,600" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/normalize.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/minimum.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/glightbox.min.css">
+    <link rel='icon' href='https://res.cloudinary.com/dcvupifbk/image/upload/c_scale,f_auto,q_100,w_16/v1543364450/EventsByThatGirl/EventsByThatGirlFavicon.ico' type='image/x-icon'/ >
+</head>
+    <body>
+        <!-- #minimum-header is optional -->
+        <header id="minimum-header">
+            <!-- Minimum Mobile Logo -->
+            <a href="#" class="mobile-logo"><img src="https://res.cloudinary.com/dcvupifbk/image/upload/c_scale,f_auto,o_80,q_100,w_80/v1543364450/EventsByThatGirl/EventsByThatGirlFavicon.png" alt="Events By That Girl Logo Image"></a>
+            <!-- Minimum Responsive Menu -->
+            <nav id="minimum-responsive-menu">
+                <!-- Optionally replace with your own TOGGLE ICON -->
+                <img id="minimum-toggle" src="https://res.cloudinary.com/dcvupifbk/image/upload/f_auto,q_100/v1544564852/EventsByThatGirl/mobileMenuIcon.png"/>
+                    <!-- Place desired menu links in here -->
+                    <ul id="minimum-items" style="display: none;">
+                        <li class="minimum-item-padding">
+                            <a class="minimum-active" href="index.html">Home</a>
+                        </li>
+                        <li class="minimum-item-padding">
+                            <a href="about.html">About</a>
+                        </li>
+                        <li class="minimum-item-padding">
+                            <a href="services.html">Services</a>
+                        </li>
+                        <li>
+                            <a href="index.html" class="desktop-logo"><img src="https://res.cloudinary.com/dcvupifbk/image/upload/c_scale,f_auto,q_100,w_180/v1543364450/EventsByThatGirl/EventsByThatGirlFavicon.png" alt="Events By That Girl Logo Image"></a>
+                        </li>
+                        <li class="minimum-item-padding">
+                            <a href="portfolio.html">Portfolio</a>
+                        </li>
+                        <li class="minimum-item-padding">
+                            <a href="quote.html">Quote</a>
+                        </li>
+                        <li class="minimum-item-padding">
+                            <a class="minimum-active" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+            </nav>
+        </header>
+        <main id="contactPage">
+            <div id="pages">
+                <section id="columnOne">
+                    <div id="headingImage" class="contact">
+                        <div class="overlay">
+                            <h1 class="mobile-heading">Contact</h1>
+                        </div>
+                    </div>
+                </section>
+                <section id="columnTwo">
+                    <h1 class="desktop-heading">Get In Touch</h1>
+                    <div class="divider full"></div>
+                    <form action="/my-handling-form-page" method="post">
+                        <div>
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="user_name" required/>
+                        <div>
+                            <label for="number">Phone Number:</label>
+                            <input type="number" id="number" name="user_number" />
+                        <div>
+                            <label for="mail">E-mail:</label>
+                            <input type="email" id="mail" name="user_email" required/>
+                        </div>
+                        <div>
+                            <label for="contact-method">Preferred Contact Method:</label>
+                            <select required>
+                                <option>Select One:</option>
+                                <option>Phone</option>
+                                <option>Email</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="msg">Message:</label>
+                            <textarea id="msg" name="user_message"></textarea>
+                        </div>
+                        <button type="sumbit" id="submit">Request Your Quote</button>
+                    </form>
+                    <div class="divider full"></div>
+                </section>
+            </div>
+        </main>
+        <div id="small-padding"></div>
+        <footer>
+            <div id="contact">
+                    <h2>Get In Touch</h2>
+                    <h4 id="gold">
+                        <strong>Samantha Heaton</strong>
+                    </h4>
+                    <div class="contact-grid">
+                        <a href="mailto:eventsbythatgirl@gmail.com?Subject=Hello%20Contacting%20You%20From%20Your%20Website">eventsbythatgirl@gmail.com</a>
+                        <button>
+                            <a href="contact.html">Contact Me</a>
+                        </button>
+                </div>
+            </div>
+            <div id="footer-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="quote.html">Quote</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <a href="https://www.methodicaldesigns.com/">Designed &amp; Developed By: <strong>Stephen Burks</strong></a>
+            </div>
+        </footer>
+        <script src="scripts/minimum-repsonsive-menu.js" async></script>
+        <script src="scripts/glightbox.min.js"></script>
+        <script>
+            var lightbox = GLightbox();
+        </script>
+    </body>
+</html>
